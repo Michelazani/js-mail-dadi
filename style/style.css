@@ -1,0 +1,24 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+#firstGame{
+    padding: 4rem;
+    background-color: beige;
+    
+}
+
+#user-mail{
+    padding: 4rem;
+    background-color: bisque;
+}
+
+button{
+    margin-top: 2rem;
+}
