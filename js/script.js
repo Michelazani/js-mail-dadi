@@ -2,9 +2,29 @@
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-const randomNumberComputer = Math.floor ( Math.random () * 6) + 1; 
-    console.log(randomNumberComputer);
-    
+
+// azione con click per scegliere numero random per utente
+
+const buttonElement = document.querySelector('button');
+
+buttonElement.addEventListener ('click' , function (){
+
+    const randomNumberComputer = Math.floor ( Math.random () * 6) + 1; 
+        console.log(randomNumberComputer)
+    const randomNumberUser = Math.floor ( Math.random () * 6) + 1;
+        console.log(randomNumberUser)
+
+    if(randomNumberComputer > randomNumberUser){
+        alert('Computer won')
+    }
+    else if(randomNumberUser > randomNumberComputer){
+        alert('You won')
+    }
+    else if(randomNumberComputer === randomNumberUser) {
+        alert('tied')
+    }
+} ) 
+
 
 
 
