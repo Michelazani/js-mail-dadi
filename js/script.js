@@ -12,7 +12,7 @@ buttonElement.addEventListener ('click' , function (){
     const randomNumberComputer = Math.floor ( Math.random () * 6) + 1; 
         console.log(randomNumberComputer)
     const randomNumberUser = Math.floor ( Math.random () * 6) + 1;
-        console.log(randomNumberUser + 'your random number')
+        console.log(randomNumberUser + ' your random number')
 
     if(randomNumberComputer > randomNumberUser){
         alert('Computer won')
@@ -46,17 +46,42 @@ const controlMailUser = [
     'giorgione@gmail.com'
 ];
 
+/*
+    controlMailUser[0] --> ciao
+    [1] -- ginetto
+*/
+
+let found = false;
+
 sendElement.addEventListener ('click' , function (){
 
-    for (let i = 1; i <= controlMailUser.length ; i++){
-        if(controlMailUser === mailTyped ){
-            controlMailUser.push (i)
-            alert('correct email')
-        }
-        else if( mailTyped != controlMailUser){
-            controlMailUser.push (i)
-            alert('try again')
-            }
+    for (let i = 0; i < controlMailUser.length ; i++){
+
+        console.log("if(" + controlMailUser[i] + " === " + mailTyped.value + ")");
+
+        if(controlMailUser[i] === mailTyped.value ){
+
+            console.log('---> entro nella if');
+
+            found = true;
+             alert('correct');
+        } 
+    
+        
    }
+
+
+sendElement.innerHTML = 'type again'
+
+    //   console.log('found:', found);
+   
+
+//     if(found === true) {
+//         console.log('mail found');
+//    } else if (found === false) {
+//         console.log('mail not fond');
+//    }    
+
+
 } ) 
 
